@@ -1,0 +1,6 @@
+baseurl = "https://faph.github.io/w/"
+languageCode = "en-gb"
+title = "W"
+
+[Params]
+  Author = "Florenz A. P. Hollebrandse"
