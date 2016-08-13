@@ -1,0 +1,17 @@
+language: go
+
+env:
+  global:
+  - SOURCE_DIR=public
+  - DEPLOY_BRANCH=master
+
+branches:
+  only:
+  - master
+
+install: go get -v github.com/spf13/hugo
+
+script:
+- hugo
+- touch ./public/.nojekyll
+- sh ./deploy.sh
