@@ -18,3 +18,4 @@ install: go get -v github.com/spf13/hugo
 script:
 - hugo
 - touch ./public/.nojekyll
+- sh ./deploy.sh
