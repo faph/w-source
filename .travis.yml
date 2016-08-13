@@ -3,7 +3,11 @@ language: go
 env:
   global:
   - SOURCE_DIR=public
-  - DEPLOY_BRANCH=master
+  - FROM_BRANCH=master
+  - TO_BRANCH=gh-pages
+  - TO_REPO=git@github.com:faph/w.git
+  - GIT_NAME=faph
+  - ENCRYPTION_LABEL=abc
 
 branches:
   only:
