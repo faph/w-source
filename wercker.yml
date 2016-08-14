@@ -5,13 +5,13 @@ build:
   - arjen/hugo-build@1.11.0:
       version: "0.15"
 
-deploy:
+publish:
   steps:
   - leipert/add-ssh-key-gh-bb:
       keyname: github_publish
   - add-to-known_hosts:
       hostname: github.com
-      fingerprint: 97:8c:1b:f2:6f:14:6b:5c:3b:ec:aa:46:46:74:7c:40
+      fingerprint: 34:5a:c1:b0:8f:a6:ac:e0:f0:a8:a5:44:7d:bb:a2:c4
   - leipert/git-push@0.7.6:
       host: github.com
       repo: faph/w
