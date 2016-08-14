@@ -21,6 +21,14 @@ publish:
         echo "Starting to push to GitHub..."
         #export GIT_SSH_COMMAND="ssh -i ~/.ssh/github_publish_PRIVATE"
         #$GIT_SSH_COMMAND
-        cd ~/.shh
+        cd ~/.ssh
         ls --all
-        git clone git@github.com:faph/w.git /tmp/cloned-repo
+        cat ~/.ssh/config
+        #git clone git@github.com:faph/w.git /tmp/cloned-repo
+  - lordlothar99/git-push@0.7.18:
+      host: github.com
+      repo: faph/w
+      gh_pages: true
+      gh_pages_domain: example.org
+      basedir: public
+      clean_removed_files: true
