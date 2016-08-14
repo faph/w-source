@@ -19,6 +19,6 @@ publish:
       host: github.com
       repo: faph/w
       gh_pages: true
-      gh_pages_domain: example.org
+      #gh_pages_domain: example.org
       basedir: public
       clean_removed_files: true
