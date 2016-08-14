@@ -11,15 +11,10 @@ publish:
       packages: openssh-client
   - wercker/add-ssh-key@1.0.3:
       keyname: github_publish
-  - krlmlr/add-ssh-key-gh-bb@0.0.9:
-      keyname: github_publish
   - wercker/add-to-known_hosts@2.0.1:
       hostname: github.com
       fingerprint: 34:5a:c1:b0:8f:a6:ac:e0:f0:a8:a5:44:7d:bb:a2:c4
-  - lordlothar99/git-push@0.7.18:
-      host: github.com
-      repo: faph/w
-      gh_pages: true
-      gh_pages_domain: example.org
-      basedir: public
-      clean_removed_files: true
+  - script:
+      name: push 
+      code : |
+        echo "Starting to push to GitHub..."
