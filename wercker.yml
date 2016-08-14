@@ -11,6 +11,7 @@ publish:
       packages: openssh-client
   - wercker/add-ssh-key@1.0.3:
       keyname: github_publish
+      host: github.com
   - wercker/add-to-known_hosts@2.0.1:
       hostname: github.com
       fingerprint: 34:5a:c1:b0:8f:a6:ac:e0:f0:a8:a5:44:7d:bb:a2:c4
@@ -18,6 +19,8 @@ publish:
       name: push 
       code : |
         echo "Starting to push to GitHub..."
-        export GIT_SSH_COMMAND="ssh -i ~/.ssh/github_publish_PRIVATE"
-        $GIT_SSH_COMMAND
+        #export GIT_SSH_COMMAND="ssh -i ~/.ssh/github_publish_PRIVATE"
+        #$GIT_SSH_COMMAND
+        cd ~/.shh
+        ls --all
         git clone git@github.com:faph/w.git /tmp/cloned-repo
