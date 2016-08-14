@@ -5,3 +5,17 @@ build:
   - arjen/hugo-build@1.11.0:
       version: "0.15"
 
+deploy:
+  steps:
+  - leipert/add-ssh-key-gh-bb:
+      keyname: github_publish
+  - add-to-known_hosts:
+      hostname: github.com
+      fingerprint: 97:8c:1b:f2:6f:14:6b:5c:3b:ec:aa:46:46:74:7c:40
+  - git-push:
+      host: github.com
+      repo: faph/w
+      gh_pages: true
+      gh_pages_domain: example.org
+      basedir: public
+      clean_removed_files: true
