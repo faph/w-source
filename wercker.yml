@@ -21,10 +21,10 @@ publish:
         echo "Starting to push to GitHub..."
         #export GIT_SSH_COMMAND="ssh -i ~/.ssh/github_publish_PRIVATE"
         #$GIT_SSH_COMMAND
-        cd ~/.ssh
-        ls --all
+        echo "SSH config file"
         cat ~/.ssh/config
-        #git clone git@github.com:faph/w.git /tmp/cloned-repo
+        echo "Trying to clone..."
+        git clone git@github.com:faph/w.git /tmp/cloned-repo
   - lordlothar99/git-push@0.7.18:
       host: github.com
       repo: faph/w
