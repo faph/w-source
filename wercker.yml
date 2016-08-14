@@ -11,6 +11,8 @@ publish:
       packages: openssh-client
   - wercker/add-ssh-key@1.0.3:
       keyname: github_publish
+  - leipert/add-ssh-key-gh-bb@0.0.6:
+      keyname: github_publish
   - wercker/add-to-known_hosts@2.0.1:
       hostname: github.com
       fingerprint: 34:5a:c1:b0:8f:a6:ac:e0:f0:a8:a5:44:7d:bb:a2:c4
