@@ -18,3 +18,4 @@ publish:
       name: push 
       code : |
         echo "Starting to push to GitHub..."
+        GIT_SSH_COMMAND="ssh -i ~/.ssh/github_publish" git clone git@github.com:faph/w.git /tmp/cloned-repo
