@@ -1,7 +1,0 @@
-baseurl = "https://faph.github.io/w/"
-languageCode = "en-gb"
-title = "W"
-theme = "hugo_theme_robust"
-
-[Params]
-  Author = "Florenz A. P. Hollebrandse"
