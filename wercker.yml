@@ -4,7 +4,7 @@ build:
   steps:
   - script:
       name: hugo-build
-      code: hugo --source="${WERCKER_SOURCE_DIR}"
+      code: hugo --source="${WERCKER_SOURCE_DIR}" --verbose
 
 publish:
   steps:
