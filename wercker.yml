@@ -8,8 +8,6 @@ build:
 
 publish:
   steps:
-  - install-packages:
-      packages: openssh-client git
   - wercker/add-ssh-key@1.0.3:
       keyname: github_publish
       host: github.com
