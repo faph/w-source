@@ -2,7 +2,9 @@ box: faph/hugo-box
 
 build:
   steps:
-  - arjen/hugo-build@1.11.0
+  - script:
+      name: hugo-build
+      code: hugo --source="${WERCKER_SOURCE_DIR}"
 
 publish:
   steps:
