@@ -2,7 +2,7 @@ box: faph/hugo-box
 
 build:
   steps:
-  - arjen/hugo-build@1.11.0:
+  - arjen/hugo-build@1.11.0
 
 publish:
   steps:
