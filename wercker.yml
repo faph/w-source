@@ -1,4 +1,4 @@
-box: faph/hugo-box:0.17
+box: faph/hugo-box:0.23
 
 build:
   steps:
